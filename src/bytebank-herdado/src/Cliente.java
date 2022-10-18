@@ -1,9 +1,11 @@
 
-public class Administrador extends Funcionario implements Autenticavel {
+//Quem assina o contrato autenticavel deve implementar!!!
+
+public class Cliente implements Autenticavel {
 
     private AutenticacaoUtil autenticador;
 
-    public Administrador() {
+    public Cliente() {
         this.autenticador = new AutenticacaoUtil(); 
     }
 
@@ -18,11 +20,5 @@ public class Administrador extends Funcionario implements Autenticavel {
         return this.autenticador.autentica(senha); 
     }
 
-    @Override
-    public double getBonificacao() {
-        return 50;
-    }
-
-  
 
 }
